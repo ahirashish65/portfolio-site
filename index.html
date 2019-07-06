@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow-x: hidden">
+
+<head runat="server">
+    <title>Home | Ashish Jalandhara - Portfolio Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=" Ashish Jalandhara Portfolio Site " />
+    <meta name="keywords"
+        content="Full Stack Web Developer, Front End Developer, Back End Developer, Freelancer, Jobs, Web Development, Software Developement, Toronto, GTA, Mississauga, Ontario, Canada" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/Ashish-logoa.png" />
+    <link rel="stylesheet" type="text/css" href="images/swiper.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var isSubmitted = false; F
+        var isSubmitteddown = false;
+
+        function ValidateBottom() {
+            var txtbottom1 = document.getElementById('phonedown');
+            var txtbottom2 = document.getElementById('fullnamedown');
+            var txtbottom3 = document.getElementById('emaildown');
+            if (txtbottom1.value == '' || txtbottom2.value == '' || txtbottom3.value == '') {
+                alert('Please fill in all fields.');
+                return false;
+            }
+            else {
+                if (!isSubmitteddown) {
+
+                    this.value = "Submitting....";
+
+                    isSubmitteddown = true;
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+
+    </script>
+    <style>
+        .button {
+            background-color: #000000;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .button1 {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #fff;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        .logo {
+            background: url("") no-repeat center center;
+            background-color: none;
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            position: absolute;
+            margin-top: -100px;
+        }
+
+        .zoom {
+            padding: 50px;
+            background-color: green;
+            transition: transform .2s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            -ms-transform: scale(1.4);
+            /* IE 9 */
+            -webkit-transform: scale(1.4);
+            /* Safari 3-8 */
+            transform: scale(1.4);
+        }
+
+
+        .img-thumbnail {
+            display: inline-block;
+            max-width: 100%;
+            height: 280px;
+            padding: 4px;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            box-shadow: 0 50px 80px -40px rgba(0, 0, 0, .35), 0 25px 25px -20px rgba(0, 0, 0, .35);
+        }
+
+        .bg-black {
+            background-color: black;
+        }
+
+        .bg-dark {
+            background-color: #17a2b8 !important;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .text-center h1 {
+            text-shadow: 1px 1px;
+        }
+
+        .text-center p {
+            font-weight: bold;
+        }
+
+        .header-2 {
+            background-color: none;
+            width: 100%;
+            height: 612px;
+            background: url("images/hmain.png") no-repeat 10% center;
+            background-size: cover;
+            margin-top: 56px;
+            box-shadow: inset 3px 3px 20px 0 #000000;
+            padding-top: 170px;
+
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 350px;
+            height: 400px;
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        .GeneratedMarquee {
+            font-family:'Comic Sans MS';
+            font-size:2em;
+            line-height:1.1em;
+            color:#17a2b8;
+            background-color:#615959;
+            padding:70px 20px 10px 20px;
+                margin-bottom: -5px;
+            }
+
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #000000;
+        }
+
+        .slider {
+            margin: 0 10%;
+            margin-bottom: 30px;
+        }
+
+        .slider .item {
+            position: relative;
+        }
+
+        .slider .item img {
+            width: 100%;
+            height: 600px;
+        }
+
+        .slider .item .quote {
+            position: absolute;
+            top: 5%;
+            left: 3%;
+            right: 15%;
+            bottom: 5%;
+        }
+
+        .slider .item .quote p {
+            margin: 5% 10% 20px 20%;
+            color: white;
+            font-size: 280%;
+            text-align: left;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .slider .item .quote2 {
+            position: absolute;
+            top: 5%;
+            left: 3%;
+            right: 15%;
+            bottom: 5%;
+        }
+
+        .slider .item .quote2 p {
+            margin: 5% 10% 20px 70%;
+            color: white;
+            font-size: 280%;
+            text-align: left;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .slider .item small {
+            margin-left: 15%;
+            color: white;
+            font-size: 200%;
+            text-align: left;
+            font-family: 'Poiret One', cursive;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .bgimg-2 {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+        .bgimg-2 {
+            background-image: url("images/parallexbg.jpg");
+            min-height: 500px;
+        }
+
+
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+
+
+
+        /* Turn off parallax scrolling for tablets and phones */
+    
+
+        .hs_cos_wrapper_type_form {
+            margin: 10px auto 30px;
+        }
+
+
+        .image-feature-1 {
+            background: url(images/movie_info.gif) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 280px;
+        }
+
+        .image-feature-2 {
+            background: url(images/weather_app.gif) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 333px;
+        }
+
+        .multi-col {
+            padding: 10px 0;
+        }
+
+        .multi-col--3-col .hs-page-width-module {
+            max-width: 990px;
+        }
+
+        .multi-col--2-col .hs-page-width-module {
+            max-width: 800px;
+        }
+
+        .multi-col-item {
+            vertical-align: top;
+            max-width: 330px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media (min-width:768px) {
+            .multi-col-item {
+                display: inline-block;
+            }
+        }
+
+        @media (min-width:768px) {
+            .multi-col--4-col .multi-col-item {
+                width: 25%;
+            }
+        }
+
+        @media (min-width:768px) {
+            .multi-col--3-col .multi-col-item {
+                width: 33.3%;
+            }
+        }
+
+        @media (min-width:768px) {
+            .multi-col--2-col .multi-col-item {
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width:768px) {
+            .multi-col--1-col .multi-col-item {
+                overflow: hidden;
+                display: table;
+                max-width: 760px;
+                margin: 0 auto 20px;
+            }
+        }
+
+        .multi-col-item__logo-wrapper {
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 176px;
+            margin: 0 auto;
+            padding: 25px 10px 0;
+        }
+
+        @media (min-width:768px) {
+            .multi-col--1-col .multi-col-item__logo-wrapper {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                width: 33%;
+                margin: 25px auto 0;
+            }
+        }
+
+        .multi-col__logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .multi-col__logo--small {
+            max-width: 155px;
+            max-height: 148px;
+        }
+
+        .multi-col__logo--big {
+            max-width: 100%;
+            max-height: 100%;
+            padding: 25px 10px 0;
+        }
+
+        .multi-col-item__text-content {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            padding: 34px 10px 25px;
+        }
+
+        @media (min-width:768px) {
+            .multi-col-item__text-content {
+                padding: 24px 30px 15px;
+            }
+        }
+
+        .multi-col-item__text-content.multi-col-item__cta {
+            margin: 0 auto 40px;
+        }
+
+        @media (min-width:768px) {
+            .multi-col--1-col .multi-col-item__text-content {
+                display: table-cell;
+                width: 67%;
+                margin: 0 auto 40px;
+            }
+        }
+
+        .multi-col-item__name {
+            margin-top: 0;
+        }
+
+        .offers .multi-col-item__wrapper {
+            padding: 10px 20px 20px;
+        }
+
+        @media (min-width:768px) {
+            .offers .multi-col-item__wrapper {
+                display: inline-block;
+                width: 49.3%;
+            }
+        }
+
+        .offers .multi-col-item {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        .offers .multi-col-item__logo-wrapper {
+            background-color: #fff;
+            border: 2px solid #e4e5e6;
+            border-radius: 3px;
+            height: 235px;
+            margin-top: 15px;
+            padding: 25px;
+        }
+
+        @media (min-width:768px) {
+            .offers .multi-col-item__logo-wrapper {
+                margin-bottom: 85px;
+            }
+        }
+
+        .offers .multi-col-item__text-content {
+            position: relative;
+            background-color: #e4e5e6;
+            width: 100%;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            padding: 0;
+        }
+
+        @media (min-width:768px) {
+            .offers .multi-col-item__text-content {
+                position: absolute;
+                top: 250px;
+                min-height: 400px;
+            }
+        }
+
+        .offers .multi-col-item__text-content:before {
+            content: "+";
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            background-color: #BC3A27;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            line-height: 23px;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .offers .multi-col-item:hover .multi-col-item__text-content {
+            top: 0;
+            opacity: .9;
+        }
+
+        @media (min-width:768px) {
+            .offers .multi-col-item:hover .multi-col-item__text-content {
+                top: 15px;
+            }
+        }
+
+        .offers .multi-col-item__name-wrapper {
+            display: table;
+            width: 100%;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            padding: 20px 25px 10px;
+        }
+
+        @media (max-width:767px) {
+            .offers .multi-col-item__name-wrapper {
+                background-color: #c73924;
+                color: #fff;
+            }
+        }
+
+        .offers .multi-col-item:hover .multi-col-item__name-wrapper {
+            background-color: #c73924;
+            color: #fff;
+        }
+
+        .offers .multi-col-item__name {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 1.4;
+            height: 60px;
+        }
+
+        .offers .multi-col-item__description {
+            margin-bottom: 0;
+            padding: 0 25px 25px;
+        }
+
+        .offers .offers__cta-wrapper {
+            display: table;
+            position: relative;
+            background-color: #e4e5e6;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px 25px 30px;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        @media (max-width:767px) {
+            .offers .offers__cta-wrapper {
+                padding-top: 5px;
+            }
+        }
+
+        .offers .offers__cta-wrapper .cta,
+        .offers .offers__cta-wrapper .cta--blue,
+        .offers .offers__cta-wrapper .cta--orange,
+        .offers .offers__cta-wrapper .cta--primary,
+        .offers .offers__cta-wrapper .cta--secondary,
+        .offers .offers__cta-wrapper .cta--tertiary,
+        .offers .offers__cta-wrapper .cta--tertiary-alt,
+        .offers .offers__cta-wrapper .cta--white {
+            vertical-align: middle;
+            max-width: 240px;
+            margin: 0 auto;
+            padding: 14px 20px;
+        }
+
+        .cta--tertiary,
+        .cta--white {
+            background-color: #fff;
+            color: #B63623;
+            border-color: #B63623;
+        }
+
+
+        .cta,
+        .cta--blue,
+        .cta--orange,
+        .cta--primary,
+        .cta--secondary,
+        .cta--tertiary,
+        .cta--tertiary-alt,
+        .cta--white {
+            font-family: proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            border: 2px solid;
+            border-radius: 3px;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+        }
+
+        @media (max-width:767px) {
+            body {
+                overflow: hidden;
+                overflow-y: visible;
+            }
+        }
+
+
+        .l-page {
+            max-width: 890px;
+        }
+
+        .hs-inbound-sales__hover-text p,
+        hs-inbound-sales__default-text p {
+            color: white;
+        }
+
+        .multi-col__logo {
+            min-width: 100%;
+            min-height: 100%;
+            max-height: none;
+            max-width: none;
+            top: 0;
+            left: -100%;
+            right: -100%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1300px) {
+            .slider .item p {
+                font-size: 240%;
+            }
+
+            .slider .item small {
+                font-size: 160%;
+            }
+        }
+
+        @media (max-width: 1150px) {
+            .slider .item .quote p {
+                font-size: 220%;
+            }
+
+            .slider .item .quote2 p {
+                font-size: 220%;
+            }
+
+            .slider .item small {
+                font-size: 140%;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            .slider {
+                margin: 0;
+                margin-bottom: 30px;
+            }
+
+            .slider .item .quote p {
+                font-size: 280%;
+            }
+
+            .slider .item .quote2 p {
+                font-size: 280%;
+            }
+
+            .slider .item .quote small {
+                font-size: 200%;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .slider .item .quote p {
+                font-size: 220%;
+            }
+
+            .slider .item .quote small {
+                font-size: 160%;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .image-feature-1
+            {
+                margin-top: 15px;
+                height: 147px;
+            }
+            .image-feature-2
+            {
+                margin-top: 15px;
+                height: 147px;
+            }
+            .logo {
+                height: 120px;
+                width: 120px;
+                margin-top: -60px;
+            }
+
+            .header-2 {
+                height: 469px;
+            }
+
+            .ashprofile
+            {
+                width: 170px;
+                height: 170px;
+                margin-bottom: 15px;
+            }
+
+            .slider .item img {
+                height: 300px;
+                width: 100%;
+                background-size: contain;
+            }
+
+
+        }
+
+        @media(max-width: 320px) {
+            .header-2 {
+                height: 250px;
+            }
+
+            .text-center h1 {
+                margin: 0px;
+            }
+        }
+
+        @media (max-width: 675px) {
+            .slider .item .quote p {
+                font-size: 180%;
+            }
+
+            .slider .item .quote2 p {
+                font-size: 180%;
+            }
+
+            .slider .item .quote small {
+                font-size: 140%;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .slider {
+                padding: 0;
+            }
+
+            .slider .item .quote {
+                left: 3%;
+                right: 3%;
+            }
+
+            .slider .item .quote2 {
+                left: 3%;
+                right: 3%;
+            }
+
+            .slider .item .quote p {
+                font-size: 140%;
+            }
+
+            .slider .item .quote2 p {
+                font-size: 140%;
+            }
+
+            .slider .item .quote small {
+                font-size: 100%;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .slider .item .quote p {
+                font-size: 120%;
+            }
+
+            .slider .item .quote2 p {
+                font-size: 120%;
+            }
+
+            .slider .item .quote small {
+                font-size: 90%;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .slider .item .quote p {
+                font-size: 100%;
+            }
+
+            .slider .item .quote2 p {
+                font-size: 100%;
+            }
+
+            .slider .item .quote small {
+                font-size: 80%;
+            }
+        }
+
+        .container .cont_nav {
+            margin: 0px;
+            width: 100%;
+        }
+
+        .nav-item {
+            padding: 0px 15px 0px 15px;
+            font-size: 17px;
+        }
+
+        .form-control {
+            display: block;
+            width: 80%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .logo-2 {
+            width: 400px;
+            height: 120px;
+        }
+
+        @media(max-width:768px) {
+            .logo-2 {
+                width: 200px;
+                height: 60px;
+            }
+
+            .img-thumbnail {
+                margin-bottom: 5px;
+                height: 383px;
+            }
+        }
+
+        @media(max-width:1024px) and (min-width:728px) {
+            .header-2 {
+                height: 468px;
+            }
+
+        }
+
+        @media(max-width:500px) {
+            
+        
+            .text-center {
+                margin-bottom: 250px;
+            }
+        }
+
+        @media(max-width:414px) {
+            .header-2 {
+                height: 469px;
+            }
+
+
+        }
+
+        /*language selector*/
+        .dropbtn {
+            background-color: #ffdd00;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #C5231E;
+        }
+    </style>
+</head>
+
+<body id="page-top" style="overflow-x: hidden">
+    <form id="form1" runat="server">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container cont_nav">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                    <div class="">
+                        <center><img src="images/Ashish-logoa.png" style="width: 62px; height: 38px;"></center>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#page-top">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#skills">SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="bg-black text-white header-2">
+            <div class="row col-lg-12">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6">
+
+                    <div class="container">
+
+                        <h1 style="font-size: 60px;
+               font-weight: 350;
+               display: block;
+               line-height: 1;
+               margin-bottom: 0px;
+               text-transform: capitalize;
+                 text-align: left; font-family: Arial, Helvetica, sans-serif;">Ashish Jalandhara</h1><br>
+                        <h2 style="text-align: left;  font-family: Arial, Helvetica, sans-serif;">Web Developer</h2><br>
+                        <a href="#portfolio" class="button button1">Explore More</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4"></div>
+            </div>
+        </header>
+
+        <section id="about">
+            <div class="container">
+                <div class="row col-sm-12" style="margin-bottom: 20px">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <center>
+                            <h2 class="slideanim" style="color: #17a2b8;">ABOUT ME</h2>
+                        </center>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+                <div class="row col-lg-12">
+
+                    <div class="col-lg-4 mx-auto slideanim">
+                        <center>
+                            <img class="ashprofile" src="images/AshishDhirubhaiJalandharaa.jpg" alt="Ashish Dhirubhai Jalandhara"
+                                width="280" height="280"
+                                style="border-radius: 4%; box-shadow: 16px 16px 9px #17a2b873; ">
+                        </center>
+
+                    </div>
+                    <div class="col-lg-8 mx-auto slideanim">
+
+                        <p class="lead">
+                            Hi, my name is Ashish Dhirubhai Jalandhara and I’m a Web Developer based in the GTA (Greater
+                            Toronto Area). I am well-organized, detail oriented, creative, and have strong technical
+                            skills. With these skills, I enjoy creating beautiful user-friendly websites, web
+                            applications by writing neat, clean and efficient semantic code. As well as I have skill
+                            based on web analytics and testing.
+                            <br>I have experience working as a Software Developer in the digital marketing industries.
+                            Previously, I have pursed my education in computer programming. I have experience as a Full
+                            stack web developer and applied my skills in various field. I love working with challenging
+                            project/tasks also, to explore new emerging technology. || Research..Design..Develop……..
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" style="background-color:#615959;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="l-page">
+
+                            <br />
+
+                            <h2 style="text-align: center; color: #17a2b8">My Skills & Competencies</h2>
+
+
+
+                        </div>
+                        <!--end row-->
+                    </div>
+
+                </div><br>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <tr>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                            <th>ASP.NET</th>
+
+                        </tr>
+
+                        <tr>
+                            <th>Bootstrap</th>
+                            <th>JavaScript</th>
+                            <th>C#</th>
+
+                        </tr>
+                        <tr>
+                            <th>SQL</th>
+                            <th>jQuery</th>
+                            <th>React</th>
+
+                        </tr>
+                        <tr>
+                            <th>UI/UX Design</th>
+                            <th>Java</th>
+                            <th>Self-Learner</th>
+
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="l-page">
+
+                            <br />
+                            <h3 style="text-align: center; font-family: Arial, Helvetica, sans-serif;  color: #17a2b8">
+                                View my profile : <a style="font-size:25px; color:whitesmoke"
+                                    href="https://www.linkedin.com/in/ashish-jalandhara-6a5b51164/">
+                                    <span class="fa fa-linkedin"></span>
+                                </a></h3>
+
+
+
+                        </div>
+                        <!--end row-->
+                    </div>
+
+                </div>
+
+          </div>
+
+          <div class=" col-lg-12" >  
+
+            <marquee class="GeneratedMarquee" direction="left" scrollamount="11" behavior="scroll">“ANYONE WHO STOPS LEARNING IS OLD, WHETHER AT TWENTY OR EIGHTY.” — HENRY FORD &nbsp;&nbsp;&nbsp;Learning is what keeps the mind young. </marquee>
+            
+            
+                    </div>
+        </section>
+
+
+
+
+
+
+
+
+        <section id="portfolio">
+            <div class="container">
+                <div class="col-lg-12 slideanim">
+
+                    <h1 style="text-align: center; color:#17a2b8">MY WORK | PORTFOLIO </h1>
+                    <br />
+                    <center>
+                        <h4 style="color: #17a2b8;"><span style="color: #000000"><strong>Multi WebPage HTML Fully
+                                    Responsive Website.</strong></span> HTML5 | CSS3 | Bootstrap | JavaScript | Media
+                            Query | These Websites are fully responsive in Desktop, Laptop, Tablet, Mobile. <br> Click
+                            below thumbnails to be redirected to the website.</h4>
+                    </center>
+
+                </div>
+
+                <div class="row col-lg-12 slideanim">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3" style="padding: 4px 40px 40px 40px;">
+
+
+                        <a href="3-pages-website-template/home.html"><img src="images/Thumb-3page.png"
+                                style="width:120px; height:250px" title="Template - 3-Pages Website"
+                                alt="Template 3-page website"></a>
+                        <br><br>
+                        <p> Multi Page(3) website built on intelligent HTML5 + CSS3, compatible on any size of screen.
+                            To be customized as per need of clients - very suitable for small businesses providing exact
+                            information needed. </p>
+                    </div>
+
+                    <div class="col-lg-3" style="padding: 4px 40px 40px 40px;">
+
+
+                        <a href="5-pages-website-template/home.html"><img src="images/Thumb-5page.png"
+                                style="width:130px; height:250px" title="Template - 5-Pages Website"
+                                alt="Template 3-page website"></a>
+                        <br /><br>
+                        <p>
+                            5 Page Website Template built with latest web technologies which, is very suitable for any
+                            kind of business owners. Neatly coded so can be modified easily as per requirments. Don't
+                            forgot to click on thumbnail to preview. </p>
+
+                    </div>
+                    <div class="col-lg-3" style="padding: 4px 40px 40px 40px;">
+
+
+
+                        <a href="https://www.gigaprofits.com/new-era-combat-sports-kanata/home.aspx"><img
+                                src="images/Thumb-completewebsite.png" style="width:120px; height:250px"
+                                title="Complete Live Website " alt="Template 3-page website"></a>
+                        <br /><br>
+                        <p>
+                            Live Multipage website of one of the client, built by using modern web technologies to be
+                            fully responsive and totally built as per client's needs and criterias. Compatible, Cutting
+                            Edge, User-Friendly. </p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+
+            </div>
+            <div class="bgimg-2">
+                <div class="caption">
+
+                </div>
+            </div>
+
+
+
+            <div class="row col-lg-12" style="background-color:white; color:#000; padding: 50px 30px 50px 30px;">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 ">
+
+                    <center>
+                        <h4 style="color: #17a2b8;"><span style="color: #000000"><strong>API Web Application - Movie
+                                    Info (Browse Movies).</strong></span> HTML5 | CSS3 | JavaScript | Axios | jQuery |
+                            API/AJAX </h4>
+                    </center>
+                    <p class="lead">
+                        This is a responsive web application I created with The Movie Database (OMDb) API. The user
+                        browse movie name or a part of movie name it will return up all movie options having that
+                        keyword. It features a design interface and returns the title of each movie,
+                        it’s respective rating out of 10, a short plot summary, and a link to it’s IMDB page as well as
+                        with some vital elements of that movie. </p>
+                    <a href="js/movieinfo/index.html" class="btn btn-link"
+                        style="color: white; background-color:#17a2b8;">Live Site</a>
+                        <br>
+
+
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="image-feature-1"></div>
+                </div>
+
+
+                <div class="col-lg-1"></div>
+            </div>
+
+
+
+            <div class="row col-lg-12 slideanim" style="margin-top: 30px; margin-left: 2px;">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="grey-bg testimonials-wrapper">
+                        <div class="row col-lg-12">
+                            <center>
+                                <h4 style="color: #17a2b8;"><span style="color: #000000"><strong>Landing
+                                            pages/Conversion pages/ Lead generation pages.</strong></span> HTML5 |
+                                    Bootstrap | CSS | JavaScript </h4>
+                            </center>
+                            <p class="lead">
+                                Here, are some examples for lead generation or mostly recognised as landing pages.
+                                These are only design of the pages and has to be modify as per demands of customer,
+                                which helps them to higher their converion rates and to obtain maximum benefits of ROI.
+                                All these pages has also be integrated in .NET environment(i.e. aspx pages) with C# to
+                                make them functional and to track leads on those pages. Web analytics such as Tag
+                                manager, pixels and many more are some extra features added at time of deployment.
+                            </p>
+
+                        </div>
+                        <div class="row col-lg-12">
+                            <div class="col-lg-3">
+                                <a href="code/crossfit-lp.html"><img src="images/lp1.png" title="Fitness"
+                                        class="img-thumbnail zoom" /></a>
+                                <br /><br>
+                                <p> Cross fit landing page -Fitness.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="code/dream-home-lp.html"> <img src="images/lp2.png" title="Real Estate "
+                                        class="img-thumbnail zoom" /></a>
+                                <br /><br>
+                                <p> Buying home - Real Estate.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="march_break_camp.html"><img src="images/lp3.png" title="Camps-Activity"
+                                        class="img-thumbnail zoom" /></a>
+                                <br /><br>
+                                <p> March Break - Camps-Activity.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="life-insurance-lp.html"><img src="images/lp4.png" title="Insurance"
+                                        class="img-thumbnail zoom" style="max-width:55% " /></a>
+                                <br /><br>
+                                <p> Life Insurance - Insurance.</p>
+                            </div>
+
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+
+
+
+            <div class="row col-lg-12" style="background-color:white; color:#000; padding: 50px 30px 50px 30px;">
+                <div class="col-lg-1"></div>
+
+                <div class="col-lg-5">
+
+                    <center>
+                        <h4 style="color: #17a2b8;"><span style="color: #000000"><strong>Weather info app - Know weather
+                                    in your city.</strong></span> HTML | JavaScript | JSON | CSS </h4>
+                    </center>
+                    <p class="lead">
+                        This is an app providing weather at your place just by entering your City name. JSON is used
+                        with OpenWeatherMap API to deliver this simple yet very helpful info.
+                        <br> By the virtue the technological advancement, in this era, the information about the weather
+                        lies in our hands (through mobile phones or websites). We can now make ourselves aware of not
+                        only our location’s temperature, humidity etc. but also any part of the world.</p>
+                    <a href="know-weather-in-your-city/index.html" class="btn btn-link"
+                        style="color: white; background-color:#17a2b8;">Live Site</a>
+
+
+                </div>
+                    
+                <div class="col-lg-5">
+                    <div class="image-feature-2"></div>
+                </div>
+
+
+                <div class="col-lg-1"></div>
+            </div>
+
+
+
+
+            <div class="row col-lg-12" style="margin-top: 30px; margin-left: 2px;">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row col-lg-12">
+                        <center>
+                            <h4 style="color: #17a2b8;"><span style="color: #000000"><strong>Squeeze page | Thank you
+                                        page - Templates.</strong></span> Front end web technologies and tools. </h4>
+                        </center>
+                        <p class="lead">
+                            These templates are more kind of squeeze pages followed by thank you or welcome pages. A
+                            single CTA is used, minimal form filled, crisp copy, short and sweet format. No worries we
+                            are not going to lost in a jungle of marketing jargon, but all these are templates which can
+                            be modified as per requirments. Just ready to go then!
+                            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Left click-hold then scroll left or
+                                just swipe left to preview more templates...</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+
+            <div class="col-lg-12" style="background-color:#fff ">
+
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(images/Spage1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/Spage2.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/Spage3.png); width:550px "></div>
+                        <div class="swiper-slide" style="background-image:url(images/Spage4.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/Tpage1.png); width:550px "></div>
+                        <div class="swiper-slide" style="background-image:url(images/Tpage2.png); width:550px "></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <section id="contact" style="padding: 0px;">
+            <div class="footer-form">
+
+
+
+                <div class="row no-margin" style="display: block;">
+                    <div class="col-lg-12 back-color" style="background-color:#615959;" id="contactform">
+
+
+
+                        <center>
+
+                            <div class="row" style="display: block;">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6" style=" padding: 40px 50px 40px 50px; ">
+                                    <h2 style="color:#17a2b8">CONTACT ME <br></h2>
+
+                                    <br>
+                                    <p class="lead" style="color: white">
+                                        I’d love to hear from you! Email me at <span> <a
+                                                href="mailto:ashish.jalandhara65@gmail.com"
+                                                style="padding:0px; color:#17a2b8"><strong>ashish.jalandhara65@gmail.com</strong></a></span>
+                                        or fill out the following form.
+                                    </p>
+                                    <br />
+                                    <br />
+
+                                    <form id="contact-form" method="post" action="contact-form-handler.php">
+                                        <div class="row" style="display: block;">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input name="name" type="text" class="form-control"
+                                                        placeholder="Name" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="display: block;">
+
+                                            <div class="col-lg-12">
+
+                                                <div class="form-group">
+                                                    <input name="email" type="email" class="form-control"
+                                                        placeholder="Email" required>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="display: block;">
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input name="phone" class="form-control"
+                                                        placeholder="Phone (Optional)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="display: block;">
+
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" class="form-control"
+                                                        placeholder="Your Message" row="4" required>
+                                                            </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br />
+
+                                        <input type="submit" class="btn btn-red" value="SEND MESSAGE"
+                                            Style="margin-top: 4px; font-size: 15px; padding: 10px 30px 10px 30px; color: white; background-color:#17a2b8; border:none;">
+
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <div class="align-center top-space-small bottom-space-small small tc-text">
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+
+                        </center>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <footer style="background-color: #17a2b8; padding: 20px; ">
+            <div class="row col-lg-12 " style="font-size: 10px;">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-3">
+                    <center>
+                        <span>&#169; Ashish Jalandhara - 2019. All Rights Reserved</span>
+                    </center>
+                </div>
+                <div class="col-lg-2 " style="font-size: 10px;">
+                    <center>
+                        <a href="" style="font-size:10px; color: black">
+                            Privacy Policy
+                        </a>
+                    </center>
+                </div>
+                <div class="col-lg-3 " style="font-size: 10px; ">
+                    <center>
+                        <a href="" style="font-size:10px; color: black">Designed By Ashish Jalandhara</a>
+                    </center>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+
+        </footer>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="images/swiper.min.js"></script>
+        <script src="css/scrolling-nav.js"></script>
+
+
+        <script>
+
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+
+
+            $(document).ready(function () {
+
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                    if (this.hash !== "") {
+
+                        event.preventDefault();
+
+                        var hash = this.hash;
+
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+
+
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+
+                $(window).scroll(function () {
+                    $(".slideanim").each(function () {
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+
+
+            $(document).ready(function () {
+                $('.slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 1000,
+                    dots: true,
+                    arrows: false,
+                    fade: true,
+                    speed: 1000
+                });
+            });
+        </script>
+
+
+
+    </form>
+</body>
+
+</html>
